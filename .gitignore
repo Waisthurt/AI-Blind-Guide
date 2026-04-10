@@ -1,0 +1,23 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Gradio 缓存（重要！一定要加）
+.gradio/
+
+# 模型文件夹
+models/
+Qwen2-VL-7B-Instruct/
+
+# 虚拟环境与配置
+venv/
+.env
+.venv
+env/
+
+# 日志与临时文件
+*.log
+/tmp/
+.DS_Store
