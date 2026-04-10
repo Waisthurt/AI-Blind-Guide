@@ -103,6 +103,22 @@ cd AI-Blind-Guide
 pip install -r requirements.txt
 
 
+1.5 模型权重准备 (Model Weights)
+本项目基于 Qwen2-VL-7B-Instruct 开发。由于模型文件较大，请通过以下方式获取并放置于项目根目录：
+
+官方下载：
+
+Bash
+# 使用 git-lfs 从 Hugging Face 克隆 (需要显存 > 16GB)
+git lfs install
+git clone https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct
+国内用户建议从 ModelScope (魔搭社区) 下载：
+
+Bash
+pip install modelscope
+python -c "from modelscope import snapshot_download; snapsh
+
+
 2. 配置 OpenClaw (网关层)
 你需要预先安装并启动 OpenClaw。
 
@@ -132,6 +148,8 @@ Bash
 python family_monitor.py
 确保看到 Running on http://127.0.0.1:5000。
 
+![系统运行截图](./images/demo1.png)
+
 窗口 2：启动 OpenClaw 网关 (中控端)
 
 Bash
@@ -145,6 +163,7 @@ Bash
 python frontend_app.py
 启动后访问 Gradio 链接，点击分析，此时数据将流经网关并推送到窗口 1。
 
+![系统运行截图](./images/demo1.png)
 
 🛠️ 技术栈
 模型: Qwen2-VL-7B-Instruct
